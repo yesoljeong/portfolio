@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <title>Portfolio</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        text-decoration: none;
+        /* font-family: 'Noto Sans KR', sans-serif;
+        font-family: 'Noto Sans JP', sans-serif; */
+        box-sizing: border-box;
+    }
+
+    /* HEADER */
+
+    header{
+        margin-top:-100px;
+        transition: all .3s ease-in-out;
+    }
+
+    header.fix {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height:80px;
+        background-color:#fff;
+        border-bottom: 1px solid #D5D5D5;
+        position: fixed;
+        top:0;
+        left:0;
+        right:0;
+        margin:0;
+        /* opacity: 0.3; */
+    }
+
+    header h1 {
+        font-size: 1rem;
+        /* background-color:green; */
+        width:10%;
+        text-align: center;
+    }
+
+    header ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        /* background-color: tomato; */
+    }
+
+    header ul li {
+        margin-right: 5%;
+        font-size:1.5rem;
+        /* background-color:green; */
+        color:#000;
+    }
+
+    header ul li a {
+        color:#000;
+    }
+
+    /* main visual */
+    #main_visual {
+        width: 100%;
+        background-image: url('img/watercolour-4116932_1280.png');
+        background-repeat: no-repeat;
+        background-color: #EAEAEA;
+        background-position: center;
+        background-attachment: fixed;
+        height: 800px;
+        margin: 0 auto;
+    }
+
+    #main_visual .main_visual_text {
+        margin: 0 auto;
+        width: 80%;
+        text-align: center;
+        font-size: 3rem;
+        padding-top: 15%;
+        font-family: 'Nunito', sans-serif;
+        letter-spacing: 20px;
+        font-weight: 900;
+        color: #4C4C4C;
+    }
+
+    /* ABOUT SECTION */
+    section h2 {
+        text-align: center;
+        margin: 100px 0 50px 0;
+        font-size: 1.3rem;
+        font-weight: 500;
+    }
+
+    #about ul {
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin: 0 auto;
+    }
+
+    #about ul li {
+        /* width: 45%; */
+        border: 1px solid #eaeaea;
+        border-radius: 5px;
+        height: 300px;
+        margin: 10px;
+        flex: 40%;
+    }
+
+    #about ul li h3 {
+        font-size: 1.1rem;
+        text-align: center;
+        font-weight: 300;
+    }
+
+    #about .about_profile {}
+
+    #about .about_skill {}
+
+    /* PORTFOLIO SECTION */
+    #portfolio ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        width: 80%;
+        margin: 20px auto;
+    }
+
+    #portfolio ul li {
+        width: 50%;
+        /* border: 1px solid lime; */
+    }
+
+    #portfolio ul li img {
+        width: 80%;
+        margin: 0 auto;
+        background: #fff;
+        margin: 10%;
+    }
+
+    /* CONTACT SECTION */
+    #contact ul {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        width: 80%;
+        margin-bottom: 100px;
+    }
+
+    #contact ul li {
+        width: 30%;
+        margin: 10px;
+        background: #eaeaea;
+        height: 300px;
+    }
+
+    #contact ul li a {
+        font-weight: 100;
+
+    }
+
+    footer {
+        height: 200px;
+        background: #eaeaea;
+    }
+
+    @media screen and (max-width:768px) {
+
+        #about ul li {
+            flex: 100%;
+            /* background:tomato; */
+        }
+
+        #portfolio ul li {
+            flex: 100%;
+        }
+
+        #contact ul li {
+            flex: 100%;
+            /* background:tomato; */
+        }
+    }
+</style>
+
+<body>
+    <div class="wrap">
+        <header>
+            <h1>JEONG YESOL</h1>
+            <ul>
+                <li><a href="">ABOUT</a></li>
+                <li><a href="">PORTFOLIO</a></li>
+                <li><a href="">CONTACT</a></li>
+            </ul>
+        </header>
+        <div id="main_visual">
+            <div class="main_visual_text">
+                <h2>JEONG YESOL</h2>
+                <p>PORTFOLIO</p>
+            </div>
+        </div>
+
+        <section>
+            <article id="about">
+                <h2>ABOUT</h2>
+                <ul>
+                    <li class="about_profile">
+                        <h3>Profile</h3>
+                    </li>
+                    <li class="about_skill">
+                        <h3>Skills</h3>
+                    </li>
+                </ul>
+            </article>
+            <article id="portfolio">
+                <h2>PORTFOLIO</h2>
+                <ul>
+                    <li class="portfolio_ediya">
+                        <a href="#">
+                            <img src="img/ediya.png" alt="">
+                        </a>
+                    </li>
+                    <li class="portfolio_linefriend"><a href="#">
+                            <img src="img/ediya.png" alt="">
+                        </a>
+                    </li>
+                    <li class="portfolio_navercorp"><a href="#">
+                            <img src="img/ediya.png" alt="">
+                        </a>
+                    </li>
+                    <li class="portfolio_navercorp"><a href="#">
+                            <img src="img/ediya.png" alt="">
+                        </a>
+                    </li>
+                </ul>
+            </article>
+            <article id="contact">
+                <h2>CONTACT</h2>
+                <ul>
+                    <li><a href="#">E-MAIL</a></li>
+                    <li><a href="#">PHONE</a></li>
+                    <li><a href="#">GITHUB</a></li>
+                </ul>
+            </article>
+        </section>
+        <footer></footer>
+    </div>
+    <script>
+        const html = document.querySelector('html');
+        const header = document.querySelector('header');
+        console.log(header);
+        window.addEventListener('scroll', scrollWork);
+
+        function scrollWork(){
+            console.log(html.scrollTop)
+            if(html.scrollTop > 415){
+                header.className = 'fix';
+            }else{
+                header.className = '';
+            }
+        }
+    </script>
+</body>
+
+</html>

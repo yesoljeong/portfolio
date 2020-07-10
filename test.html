@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="gugudan">
+        <p></p>
+    </div>
+
+    <script>
+        var num = prompt();  // ---1 prompt로 숫자 입력 받음
+        var newP = document.querySelector('.gugudan>p');
+
+        for (var i = 1; i < 10; i++) {
+            newP.innerHTML += `${num}x${i}=${num*i}<br>`
+        }
+
+    </script>
+</body>
+
+</html>

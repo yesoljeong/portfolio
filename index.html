@@ -23,76 +23,156 @@
         box-sizing: border-box;
     }
 
-    /* HEADER */
-
-    header{
-        margin-top:-100px;
-        transition: all .3s ease-in-out;
+    html,
+    body,
+    .wrap {
+        height: 100%;
+        border: 1px solid red;
     }
 
-    header.fix {
+    /* HEADER */
+    header {
         display: flex;
-        justify-content: space-around;
+        justify-content:center;
+        flex-direction: row-reverse;
         align-items: center;
-        height:80px;
-        background-color:#fff;
+        background-color: #fff;
         border-bottom: 1px solid #D5D5D5;
         position: fixed;
-        top:0;
-        left:0;
-        right:0;
-        margin:0;
-        /* opacity: 0.3; */
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        /* border:2px solid lime; */
     }
 
     header h1 {
-        font-size: 1rem;
-        /* background-color:green; */
-        width:10%;
-        text-align: center;
+        font-size: 0.8rem;
+        width: 60%;
+        text-align: right;
+        /* border: 1px solid red; */
+        font-family: 'Noto Sans KR', sans-serif;
+        letter-spacing: 2px;
     }
 
     header ul {
         display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 90%;
-        /* background-color: tomato; */
+        /* width: 30%; */
+        /* border: 1px solid blue; */
     }
 
-    header ul li {
-        margin-right: 5%;
-        font-size:1.5rem;
-        /* background-color:green; */
-        color:#000;
+    header ul li {       
+        color: #000;
+        /* border: 1px solid red; */
     }
 
     header ul li a {
-        color:#000;
+        display: block;
+        color: #000;
+        font-size: 0.9rem;
+        font-weight: 700;
+        font-family: 'Noto Sans KR', sans-serif;
+        padding: 20px 40px 20px 0;
+        letter-spacing: 3px;       
+    }
+
+    header ul li a:hover{
+        color:brown;
     }
 
     /* main visual */
     #main_visual {
         width: 100%;
-        background-image: url('img/watercolour-4116932_1280.png');
+        height: 100%;
+        background-image: url('img/main-visual1.png');
+        background-size: 80%;
         background-repeat: no-repeat;
         background-color: #EAEAEA;
-        background-position: center;
-        background-attachment: fixed;
-        height: 800px;
+        background-position: right bottom;
         margin: 0 auto;
+        border: 1px solid lime;
     }
 
     #main_visual .main_visual_text {
-        margin: 0 auto;
-        width: 80%;
+        width: 50%;
+        height: 100%;
+        vertical-align: middle;
         text-align: center;
-        font-size: 3rem;
+        font-size: 1.7rem;
         padding-top: 15%;
-        font-family: 'Nunito', sans-serif;
-        letter-spacing: 20px;
-        font-weight: 900;
+        font-family: 'Noto Sans KR', sans-serif;
+        font-weight: 500;
         color: #4C4C4C;
+        border: 1px solid red;
+    }
+
+    #main_visual .main_visual_text p{
+        margin-top:20px;
+
+    }
+
+    #main_visual .star img {
+        position: absolute;
+        border: 1px solid red;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease;
+    }
+
+    @keyframes star1 {
+        from {
+            opacity: 1;
+        }
+
+        to {
+            opacity: 0;
+            transform: rotate(90deg);
+        }
+    }
+
+    #main_visual .star img:nth-child(1) {
+        top: 450px;
+        right: 100px;
+        width: 40px;
+        animation-name: star1;
+        animation-duration: 2s;
+    }
+
+    @keyframes star2 {
+        from {
+            opacity: 1;
+        }
+
+        to {
+            opacity: 0;
+            transform: rotate(-60deg);
+        }
+    }
+
+    #main_visual .star img:nth-child(2) {
+        bottom: 100px;
+        left: 300px;
+        width: 50px;
+        animation-name: star2;
+        animation-duration: 1.8s;
+    }
+
+    @keyframes star3 {
+        from {
+            opacity: 1;
+        }
+
+        to {
+            opacity: 0;
+            transform: rotate(30deg);
+        }
+    }
+
+    #main_visual .star img:nth-child(3) {
+        top: 100px;
+        left: 200px;
+        width: 30px;
+        animation-name: star3;
+        animation-duration: 2s;
     }
 
     /* ABOUT SECTION */
@@ -101,6 +181,9 @@
         margin: 100px 0 50px 0;
         font-size: 1.3rem;
         font-weight: 500;
+        font-family: 'Noto Sans KR', sans-serif;
+        letter-spacing: 2px;
+        border:1px solid red;
     }
 
     #about ul {
@@ -112,7 +195,6 @@
     }
 
     #about ul li {
-        /* width: 45%; */
         border: 1px solid #eaeaea;
         border-radius: 5px;
         height: 300px;
@@ -202,15 +284,20 @@
         <header>
             <h1>JEONG YESOL</h1>
             <ul>
-                <li><a href="">ABOUT</a></li>
-                <li><a href="">PORTFOLIO</a></li>
-                <li><a href="">CONTACT</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#portfolio">PORTFOLIO</a></li>
+                <li><a href="#contact">CONTACT</a></li>
             </ul>
         </header>
         <div id="main_visual">
             <div class="main_visual_text">
-                <h2>JEONG YESOL</h2>
-                <p>PORTFOLIO</p>
+                <h2>Welcome!</h2>
+                <p>정예솔의 포트폴리오 사이트 입니다 :)</p>
+            </div>
+            <div class="star">
+                <img src="img/star.png" alt="">
+                <img src="img/star.png" alt="">
+                <img src="img/star.png" alt="">
             </div>
         </div>
 
@@ -260,19 +347,7 @@
         <footer></footer>
     </div>
     <script>
-        const html = document.querySelector('html');
-        const header = document.querySelector('header');
-        console.log(header);
-        window.addEventListener('scroll', scrollWork);
 
-        function scrollWork(){
-            console.log(html.scrollTop)
-            if(html.scrollTop > 415){
-                header.className = 'fix';
-            }else{
-                header.className = '';
-            }
-        }
     </script>
 </body>
 

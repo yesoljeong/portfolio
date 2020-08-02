@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap"
@@ -13,16 +14,6 @@
     <title>Portfolio</title>
 </head>
 <style>
-    * {
-        margin: 0;
-        padding: 0;
-        list-style: none;
-        text-decoration: none;
-        /* font-family: 'Noto Sans KR', sans-serif;
-        font-family: 'Noto Sans JP', sans-serif; */
-        box-sizing: border-box;
-    }
-
     html,
     body,
     .wrap {
@@ -33,7 +24,7 @@
     /* HEADER */
     header {
         display: flex;
-        justify-content:center;
+        justify-content: center;
         flex-direction: row-reverse;
         align-items: center;
         background-color: #fff;
@@ -43,54 +34,49 @@
         left: 0;
         right: 0;
         z-index: 1;
-        /* border:2px solid lime; */
     }
 
     header h1 {
         font-size: 0.8rem;
         width: 60%;
         text-align: right;
-        /* border: 1px solid red; */
         font-family: 'Noto Sans KR', sans-serif;
         letter-spacing: 2px;
     }
 
     header ul {
         display: flex;
-        /* width: 30%; */
-        /* border: 1px solid blue; */
     }
 
-    header ul li {       
+    header ul li {
         color: #000;
-        /* border: 1px solid red; */
     }
 
     header ul li a {
         display: block;
-        color: #000;
+        color: #beb4ac;
         font-size: 0.9rem;
         font-weight: 700;
         font-family: 'Noto Sans KR', sans-serif;
         padding: 20px 40px 20px 0;
-        letter-spacing: 3px;       
+        letter-spacing: 3px;
     }
 
-    header ul li a:hover{
-        color:brown;
+    header ul li a:hover {
+        color: #877a6f;
     }
 
     /* main visual */
     #main_visual {
         width: 100%;
         height: 100%;
-        background-image: url('img/main-visual1.png');
+        background: url('img/main-visual1.png');
         background-size: 80%;
         background-repeat: no-repeat;
-        background-color: #EAEAEA;
         background-position: right bottom;
         margin: 0 auto;
         border: 1px solid lime;
+        background-color: #FFF2E6;
     }
 
     #main_visual .main_visual_text {
@@ -106,8 +92,8 @@
         border: 1px solid red;
     }
 
-    #main_visual .main_visual_text p{
-        margin-top:20px;
+    #main_visual .main_visual_text p {
+        margin-top: 20px;
 
     }
 
@@ -178,26 +164,29 @@
     /* ABOUT SECTION */
     section h2 {
         text-align: center;
-        margin: 100px 0 50px 0;
+        margin-top: 100px;
         font-size: 1.3rem;
         font-weight: 500;
         font-family: 'Noto Sans KR', sans-serif;
         letter-spacing: 2px;
-        border:1px solid red;
+        /* border: 1px solid red; */
     }
 
-    #about ul {
+    section .line {
+        background: linear-gradient(to right, #beb4ac, #877a6f, #beb4ac);
+        width: 50px;
+        height: 3px;
+        margin: 20px auto 50px auto;
+        /* border-radius: 10px; */
+    }
+
+    #about>ul {
         width: 80%;
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
         margin: 0 auto;
     }
 
-    #about ul li {
+    #about>ul>li {
         border: 1px solid #eaeaea;
-        border-radius: 5px;
-        height: 300px;
         margin: 10px;
         flex: 40%;
     }
@@ -210,28 +199,108 @@
 
     #about .about_profile {}
 
-    #about .about_skill {}
+    #about .about_skill {
+        border: 1px solid red;
+    }
+
+    #about .about_skill ul {
+        border: 1px solid red;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        margin:0 auto;
+    }
+
+    #about .about_skill ul li{
+        border:1px solid lime;
+        margin:0 auto;
+    }
+
+    #about .about_skill ul li div:nth-child(1){
+        border:2px solid tomato;
+        background-color:lime;
+        width:100px;
+        height:100px;
+        margin:30px auto;
+        border-radius: 50%;
+    }
+
+    #about .about_skill ul li div img{
+        width:80px;
+        /* height:80px; */
+        padding:10px;
+        border:1px solid lime;
+    }
+
+    #about .about_skill ul li .skill_icon:nth-child(2) {
+        background-position: -38px -0px;
+        border:1px solid blue;
+    }
+
+    #about .about_skill ul li:nth-child(3) {
+        background-position: -80px -10px;
+    }
+
+    #about .about_skill ul li .skill_desc{
+        border:1px solid red;
+        margin-left:20px;
+    }
 
     /* PORTFOLIO SECTION */
     #portfolio ul {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: center;
-        width: 80%;
         margin: 20px auto;
+        /* border: 5px solid lime */
     }
 
     #portfolio ul li {
-        width: 50%;
-        /* border: 1px solid lime; */
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        border: 1px solid blue;
+        margin-bottom: 100px;
     }
 
     #portfolio ul li img {
-        width: 80%;
-        margin: 0 auto;
         background: #fff;
-        margin: 10%;
+        width: 40%;
+        /* border: 2px solid red; */
+    }
+
+    #portfolio ul li .portfolio_text {
+        width: 40%;
+        border: 1px solid blue;
+        font-family: 'Noto Sans KR', sans-serif;
+    }
+
+    #portfolio ul li .portfolio_text h3 {
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+
+    #portfolio ul li .portfolio_text h4 {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    #portfolio ul li .portfolio_text p {
+        margin-bottom: 50px;
+    }
+
+    #portfolio ul li .portfolio_text button {
+        padding: 10px 80px;
+        font-size: 20px;
+        background-color: #877a6f;
+        border: 1px solid grey;
+        cursor: pointer;
+        color: #beb4ac;
+    }
+
+    #portfolio ul li.portfolio_linefriend {
+        flex-direction: row-reverse;
+    }
+
+    #portfolio ul li.portfolio_linefriend .portfolio_text {
+        text-align: right;
     }
 
     /* CONTACT SECTION */
@@ -265,7 +334,6 @@
 
         #about ul li {
             flex: 100%;
-            /* background:tomato; */
         }
 
         #portfolio ul li {
@@ -274,7 +342,6 @@
 
         #contact ul li {
             flex: 100%;
-            /* background:tomato; */
         }
     }
 </style>
@@ -304,39 +371,76 @@
         <section>
             <article id="about">
                 <h2>ABOUT</h2>
+                <div class='line'></div>
                 <ul>
                     <li class="about_profile">
                         <h3>Profile</h3>
                     </li>
                     <li class="about_skill">
                         <h3>Skills</h3>
+                        <ul>
+                            <li>
+                                <div><img src="img/html_icon.png" alt=""></div>
+                                <div class="skill_desc">
+                                    <h5>html5</h5>
+                                    <p>html5 웹표준을 준수하여 작업합니다.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div><img src="img/css_icon.png" alt=""></div>
+                                <div class="skill_desc">
+                                    <h5>html5</h5>
+                                    <p>html5 웹표준을 준수하여 작업합니다.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div><img src="img/js_icon.png" alt=""></div>
+                                <div class="skill_desc">
+                                    <h5>html5</h5>
+                                    <p>html5 웹표준을 준수하여 작업합니다.</p>
+                                </div>
+                            </li>
+                        </ul>
                     </li>
                 </ul>
             </article>
             <article id="portfolio">
                 <h2>PORTFOLIO</h2>
+                <div class='line'></div>
                 <ul>
                     <li class="portfolio_ediya">
-                        <a href="#">
-                            <img src="img/ediya.png" alt="">
-                        </a>
+                        <img src="img/ediya_site.png" alt="">
+                        <div class="portfolio_text">
+                            <h3>EDIYA COFFEE 반응형 사이트</h3>
+                            <h4>PC / Pad / Mobile 반응형 사이트 클론 코딩</h4>
+                            <p>html5 / css3 / javascript를 이용해 만들었습니다.</p>
+                            <button type="button"
+                                onclick="window.open('https://yesoljeong.github.io/ediya/') ">View</button>
+                        </div>
                     </li>
-                    <li class="portfolio_linefriend"><a href="#">
-                            <img src="img/ediya.png" alt="">
+                    <li class="portfolio_linefriend">
+                        <img src="img/line_imac.png" alt="">
+                        <div class="portfolio_text">
+                            <h3>LINE - FRIDENDS</h3>
+                            <h4>PC 웹 사이트 클론 코딩</h4>
+                            <p></p>
+                            <button type="button"
+                                onclick="window.open('https://yesoljeong.github.io/ediya/') ">View</button>
+                        </div>
+                    </li>
+                    <li class="portfolio_navercorp"><a href="#">
+                            <!-- <img src="img/ediya.png" alt=""> -->
                         </a>
                     </li>
                     <li class="portfolio_navercorp"><a href="#">
-                            <img src="img/ediya.png" alt="">
-                        </a>
-                    </li>
-                    <li class="portfolio_navercorp"><a href="#">
-                            <img src="img/ediya.png" alt="">
+                            <!-- <img src="img/ediya.png" alt=""> -->
                         </a>
                     </li>
                 </ul>
             </article>
             <article id="contact">
                 <h2>CONTACT</h2>
+                <div class='line'></div>
                 <ul>
                     <li><a href="#">E-MAIL</a></li>
                     <li><a href="#">PHONE</a></li>

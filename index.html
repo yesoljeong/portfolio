@@ -84,7 +84,7 @@
         height: 100%;
         vertical-align: middle;
         text-align: center;
-        font-size: 1.7rem;
+        font-size: 50px;
         padding-top: 15%;
         font-family: 'Noto Sans KR', sans-serif;
         font-weight: 500;
@@ -93,8 +93,8 @@
     }
 
     #main_visual .main_visual_text p {
-        margin-top: 20px;
-
+        margin-top: 35px;
+        font-size:30px;
     }
 
     #main_visual .star img {
@@ -111,7 +111,7 @@
 
         to {
             opacity: 0;
-            transform: rotate(90deg);
+            transform: rotate(120deg);
         }
     }
 
@@ -130,7 +130,7 @@
 
         to {
             opacity: 0;
-            transform: rotate(-60deg);
+            transform: rotate(-160deg);
         }
     }
 
@@ -149,7 +149,7 @@
 
         to {
             opacity: 0;
-            transform: rotate(30deg);
+            transform: rotate(120deg);
         }
     }
 
@@ -166,7 +166,7 @@
         text-align: center;
         margin-top: 100px;
         font-size: 1.3rem;
-        font-weight: 500;
+        font-weight: 700;
         font-family: 'Noto Sans KR', sans-serif;
         letter-spacing: 2px;
         /* border: 1px solid red; */
@@ -174,8 +174,8 @@
 
     section .line {
         background: linear-gradient(to right, #beb4ac, #877a6f, #beb4ac);
-        width: 50px;
-        height: 3px;
+        width: 120px;
+        height: 1px;
         margin: 20px auto 50px auto;
         /* border-radius: 10px; */
     }
@@ -195,61 +195,94 @@
         font-size: 1.1rem;
         text-align: center;
         font-weight: 300;
+        font-family: 'Noto Sans KR', sans-serif;
+        margin: 50px auto;
+        letter-spacing: 1px;
     }
 
-    #about .about_profile {}
-
-    #about .about_skill {
+    /* ABOUT PROFILE */
+    #about .about_profile {
         border: 1px solid red;
     }
 
-    #about .about_skill ul {
-        border: 1px solid red;
-        display:flex;
-        justify-content: center;
-        align-items: center;
-        margin:0 auto;
+    #about .about_profile .profile_img_text {
+        display: flex;
+        justify-content: space-around;
     }
 
-    #about .about_skill ul li{
-        border:1px solid lime;
-        margin:0 auto;
-    }
-
-    #about .about_skill ul li div:nth-child(1){
-        border:2px solid tomato;
-        background-color:lime;
-        width:100px;
-        height:100px;
-        margin:30px auto;
-        border-radius: 50%;
-    }
-
-    #about .about_skill ul li div img{
-        width:80px;
-        /* height:80px; */
-        padding:10px;
-        border:1px solid lime;
-    }
-
-    #about .about_skill ul li .skill_icon:nth-child(2) {
-        background-position: -38px -0px;
+    #about .about_profile .profile_img_text div {
         border:1px solid blue;
     }
 
-    #about .about_skill ul li:nth-child(3) {
-        background-position: -80px -10px;
+
+    #about .about_profile .profile_img_text img{
+        border-radius: 50%;
     }
 
-    #about .about_skill ul li .skill_desc{
-        border:1px solid red;
-        margin-left:20px;
+    #about .about_profile .profile_img_text p{
+        line-height: 30px;
+    }
+
+    /* ABOUT SKILL */
+    #about .about_skill {
+        /* border: 1px solid red; */
+    }
+
+    #about .about_skill ul {
+        /* border: 1px solid red; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+
+    #about .about_skill ul li {
+        /* border:1px solid lime; */
+        margin: 0 auto;
+    }
+
+    #about .about_skill ul li div:nth-child(1) {
+        background-color: #beb4ac;
+        background-size: 65px;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 140px;
+        height: 140px;
+        margin: 0 auto 30px auto;
+        border-radius: 50%;
+    }
+
+    #about .about_skill ul li .html_icon {
+        background-image: url('img/html_icon.png');
+    }
+
+    #about .about_skill ul li .css_icon {
+        background-image: url('img/css_icon.png');
+    }
+
+    #about .about_skill ul li .js_icon {
+        background-image: url('img/js_icon.png');
+    }
+
+    #about .about_skill ul li .skill_desc {
+        font-family: 'Noto Sans KR', sans-serif;
+        /* border:1px solid red; */
+    }
+
+    #about .about_skill ul li .skill_desc h5 {
+        margin-bottom: 10px;
+        text-align: center;
+        font-weight: 900;
+    }
+
+    #about .about_skill ul li .skill_desc p {
+        line-height: 25px;
+        font-size:13px;
     }
 
     /* PORTFOLIO SECTION */
     #portfolio ul {
         margin: 20px auto;
-        /* border: 5px solid lime */
     }
 
     #portfolio ul li {
@@ -263,7 +296,6 @@
     #portfolio ul li img {
         background: #fff;
         width: 40%;
-        /* border: 2px solid red; */
     }
 
     #portfolio ul li .portfolio_text {
@@ -359,7 +391,7 @@
         <div id="main_visual">
             <div class="main_visual_text">
                 <h2>Welcome!</h2>
-                <p>정예솔의 포트폴리오 사이트 입니다 :)</p>
+                <p>정예솔의 포트폴리오 페이지 입니다 :)</p>
             </div>
             <div class="star">
                 <img src="img/star.png" alt="">
@@ -375,29 +407,53 @@
                 <ul>
                     <li class="about_profile">
                         <h3>Profile</h3>
+                        <div class="profile_img_text">
+                            <div>
+                                <img src="http://placekitten.com/300/300" alt="">
+                            </div>
+                            <div>
+                                <p>
+                                    Lorem Ipsum is simply dummy text of the printing and <br>
+                                    typesetting industry. Lorem Ipsum has been the industry's <br>
+                                    standard dummy text ever since the 1500s, when an unknown <br>
+                                    printer took a galley of type and scrambled it to make a type <br>
+                                    specimen book. It has survived not only five centuries, <br>
+                                    but also the leap into electronic typesetting, <br>
+                                    remaining essentially unchanged. It was popularised in the 1960s <br>
+                                    with the release of Letraset sheets containing Lorem Ipsum passages, <br>
+                                    
+                                </p>
+                            </div>
+                        </div>
                     </li>
                     <li class="about_skill">
                         <h3>Skills</h3>
                         <ul>
                             <li>
-                                <div><img src="img/html_icon.png" alt=""></div>
+                                <div class="html_icon"></div>
                                 <div class="skill_desc">
-                                    <h5>html5</h5>
-                                    <p>html5 웹표준을 준수하여 작업합니다.</p>
+                                    <h5>HTML5</h5>
+                                    <p>html5 웹표준을 준수하여 작업합니다.<br>
+                                        html5 웹표준을 준수하여 작업합니다.
+                                    </p>
                                 </div>
                             </li>
                             <li>
-                                <div><img src="img/css_icon.png" alt=""></div>
+                                <div class="css_icon"></div>
                                 <div class="skill_desc">
-                                    <h5>html5</h5>
-                                    <p>html5 웹표준을 준수하여 작업합니다.</p>
+                                    <h5>CSS3</h5>
+                                    <p>html5 웹표준을 준수하여 작업합니다.<br>
+                                        html5 웹표준을 준수하여 작업합니다.
+                                    </p>
                                 </div>
                             </li>
                             <li>
-                                <div><img src="img/js_icon.png" alt=""></div>
+                                <div class="js_icon"></div>
                                 <div class="skill_desc">
-                                    <h5>html5</h5>
-                                    <p>html5 웹표준을 준수하여 작업합니다.</p>
+                                    <h5>JavaScript</h5>
+                                    <p>html5 웹표준을 준수하여 작업합니다.<br>
+                                        html5 웹표준을 준수하여 작업합니다.
+                                    </p>
                                 </div>
                             </li>
                         </ul>
@@ -411,8 +467,8 @@
                     <li class="portfolio_ediya">
                         <img src="img/ediya_site.png" alt="">
                         <div class="portfolio_text">
-                            <h3>EDIYA COFFEE 반응형 사이트</h3>
-                            <h4>PC / Pad / Mobile 반응형 사이트 클론 코딩</h4>
+                            <h3>EDIYA COFFEE 반응형 페이지</h3>
+                            <h4>PC / Pad / Mobile 반응형 페이지 클론 코딩</h4>
                             <p>html5 / css3 / javascript를 이용해 만들었습니다.</p>
                             <button type="button"
                                 onclick="window.open('https://yesoljeong.github.io/ediya/') ">View</button>
@@ -421,8 +477,8 @@
                     <li class="portfolio_linefriend">
                         <img src="img/line_imac.png" alt="">
                         <div class="portfolio_text">
-                            <h3>LINE - FRIDENDS</h3>
-                            <h4>PC 웹 사이트 클론 코딩</h4>
+                            <h3>LINE - FRIENDS</h3>
+                            <h4>PC 웹 페이지 클론 코딩</h4>
                             <p></p>
                             <button type="button"
                                 onclick="window.open('https://yesoljeong.github.io/ediya/') ">View</button>

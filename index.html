@@ -5,378 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/reset.css">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
-        rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap"
-        rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800;900&display=swap"
-        rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" media="screen and (max-width: 980px)" href="css/pad.css">
+    <link rel="stylesheet" media="screen and (max-width: 640px)" href="css/mobile.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <title>Portfolio</title>
 </head>
-<style>
-    html,
-    body,
-    .wrap {
-        height: 100%;
-        border: 1px solid red;
-    }
-
-    /* HEADER */
-    header {
-        display: flex;
-        justify-content: center;
-        flex-direction: row-reverse;
-        align-items: center;
-        background-color: #fff;
-        border-bottom: 1px solid #D5D5D5;
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        z-index: 1;
-    }
-
-    header h1 {
-        font-size: 0.8rem;
-        width: 60%;
-        text-align: right;
-        font-family: 'Noto Sans KR', sans-serif;
-        letter-spacing: 2px;
-    }
-
-    header ul {
-        display: flex;
-    }
-
-    header ul li {
-        color: #000;
-    }
-
-    header ul li a {
-        display: block;
-        color: #beb4ac;
-        font-size: 0.9rem;
-        font-weight: 700;
-        font-family: 'Noto Sans KR', sans-serif;
-        padding: 20px 40px 20px 0;
-        letter-spacing: 3px;
-    }
-
-    header ul li a:hover {
-        color: #877a6f;
-    }
-
-    /* main visual */
-    #main_visual {
-        width: 100%;
-        height: 100%;
-        background: url('img/main-visual1.png');
-        background-size: 80%;
-        background-repeat: no-repeat;
-        background-position: right bottom;
-        margin: 0 auto;
-        border: 1px solid lime;
-        background-color: #FFF2E6;
-    }
-
-    #main_visual .main_visual_text {
-        width: 50%;
-        height: 100%;
-        vertical-align: middle;
-        text-align: center;
-        font-size: 50px;
-        padding-top: 15%;
-        font-family: 'Noto Sans KR', sans-serif;
-        font-weight: 500;
-        color: #4C4C4C;
-        border: 1px solid red;
-    }
-
-    #main_visual .main_visual_text p {
-        margin-top: 35px;
-        font-size:30px;
-    }
-
-    #main_visual .star img {
-        position: absolute;
-        border: 1px solid red;
-        animation-iteration-count: infinite;
-        animation-timing-function: ease;
-    }
-
-    @keyframes star1 {
-        from {
-            opacity: 1;
-        }
-
-        to {
-            opacity: 0;
-            transform: rotate(120deg);
-        }
-    }
-
-    #main_visual .star img:nth-child(1) {
-        top: 450px;
-        right: 100px;
-        width: 40px;
-        animation-name: star1;
-        animation-duration: 2s;
-    }
-
-    @keyframes star2 {
-        from {
-            opacity: 1;
-        }
-
-        to {
-            opacity: 0;
-            transform: rotate(-160deg);
-        }
-    }
-
-    #main_visual .star img:nth-child(2) {
-        bottom: 100px;
-        left: 300px;
-        width: 50px;
-        animation-name: star2;
-        animation-duration: 1.8s;
-    }
-
-    @keyframes star3 {
-        from {
-            opacity: 1;
-        }
-
-        to {
-            opacity: 0;
-            transform: rotate(120deg);
-        }
-    }
-
-    #main_visual .star img:nth-child(3) {
-        top: 100px;
-        left: 200px;
-        width: 30px;
-        animation-name: star3;
-        animation-duration: 2s;
-    }
-
-    /* ABOUT SECTION */
-    section h2 {
-        text-align: center;
-        margin-top: 100px;
-        font-size: 1.3rem;
-        font-weight: 700;
-        font-family: 'Noto Sans KR', sans-serif;
-        letter-spacing: 2px;
-        /* border: 1px solid red; */
-    }
-
-    section .line {
-        background: linear-gradient(to right, #beb4ac, #877a6f, #beb4ac);
-        width: 120px;
-        height: 1px;
-        margin: 20px auto 50px auto;
-        /* border-radius: 10px; */
-    }
-
-    #about>ul {
-        width: 80%;
-        margin: 0 auto;
-    }
-
-    #about>ul>li {
-        border: 1px solid #eaeaea;
-        margin: 10px;
-        flex: 40%;
-    }
-
-    #about ul li h3 {
-        font-size: 1.1rem;
-        text-align: center;
-        font-weight: 300;
-        font-family: 'Noto Sans KR', sans-serif;
-        margin: 50px auto;
-        letter-spacing: 1px;
-    }
-
-    /* ABOUT PROFILE */
-    #about .about_profile {
-        border: 1px solid red;
-    }
-
-    #about .about_profile .profile_img_text {
-        display: flex;
-        justify-content: space-around;
-    }
-
-    #about .about_profile .profile_img_text div {
-        border:1px solid blue;
-    }
-
-
-    #about .about_profile .profile_img_text img{
-        border-radius: 50%;
-    }
-
-    #about .about_profile .profile_img_text p{
-        line-height: 30px;
-    }
-
-    /* ABOUT SKILL */
-    #about .about_skill {
-        /* border: 1px solid red; */
-    }
-
-    #about .about_skill ul {
-        /* border: 1px solid red; */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 0 auto;
-    }
-
-    #about .about_skill ul li {
-        /* border:1px solid lime; */
-        margin: 0 auto;
-    }
-
-    #about .about_skill ul li div:nth-child(1) {
-        background-color: #beb4ac;
-        background-size: 65px;
-        background-repeat: no-repeat;
-        background-position: center;
-        width: 140px;
-        height: 140px;
-        margin: 0 auto 30px auto;
-        border-radius: 50%;
-    }
-
-    #about .about_skill ul li .html_icon {
-        background-image: url('img/html_icon.png');
-    }
-
-    #about .about_skill ul li .css_icon {
-        background-image: url('img/css_icon.png');
-    }
-
-    #about .about_skill ul li .js_icon {
-        background-image: url('img/js_icon.png');
-    }
-
-    #about .about_skill ul li .skill_desc {
-        font-family: 'Noto Sans KR', sans-serif;
-        /* border:1px solid red; */
-    }
-
-    #about .about_skill ul li .skill_desc h5 {
-        margin-bottom: 10px;
-        text-align: center;
-        font-weight: 900;
-    }
-
-    #about .about_skill ul li .skill_desc p {
-        line-height: 25px;
-        font-size:13px;
-    }
-
-    /* PORTFOLIO SECTION */
-    #portfolio ul {
-        margin: 20px auto;
-    }
-
-    #portfolio ul li {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        border: 1px solid blue;
-        margin-bottom: 100px;
-    }
-
-    #portfolio ul li img {
-        background: #fff;
-        width: 40%;
-    }
-
-    #portfolio ul li .portfolio_text {
-        width: 40%;
-        border: 1px solid blue;
-        font-family: 'Noto Sans KR', sans-serif;
-    }
-
-    #portfolio ul li .portfolio_text h3 {
-        font-size: 30px;
-        margin-bottom: 20px;
-    }
-
-    #portfolio ul li .portfolio_text h4 {
-        font-size: 20px;
-        margin-bottom: 20px;
-    }
-
-    #portfolio ul li .portfolio_text p {
-        margin-bottom: 50px;
-    }
-
-    #portfolio ul li .portfolio_text button {
-        padding: 10px 80px;
-        font-size: 20px;
-        background-color: #877a6f;
-        border: 1px solid grey;
-        cursor: pointer;
-        color: #beb4ac;
-    }
-
-    #portfolio ul li.portfolio_linefriend {
-        flex-direction: row-reverse;
-    }
-
-    #portfolio ul li.portfolio_linefriend .portfolio_text {
-        text-align: right;
-    }
-
-    /* CONTACT SECTION */
-    #contact ul {
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
-        margin: 0 auto;
-        width: 80%;
-        margin-bottom: 100px;
-    }
-
-    #contact ul li {
-        width: 30%;
-        margin: 10px;
-        background: #eaeaea;
-        height: 300px;
-    }
-
-    #contact ul li a {
-        font-weight: 100;
-
-    }
-
-    footer {
-        height: 200px;
-        background: #eaeaea;
-    }
-
-    @media screen and (max-width:768px) {
-
-        #about ul li {
-            flex: 100%;
-        }
-
-        #portfolio ul li {
-            flex: 100%;
-        }
-
-        #contact ul li {
-            flex: 100%;
-        }
-    }
-</style>
 
 <body>
     <div class="wrap">
@@ -409,21 +44,27 @@
                         <h3>Profile</h3>
                         <div class="profile_img_text">
                             <div>
-                                <img src="http://placekitten.com/300/300" alt="">
-                            </div>
-                            <div>
-                                <p>
-                                    Lorem Ipsum is simply dummy text of the printing and <br>
-                                    typesetting industry. Lorem Ipsum has been the industry's <br>
-                                    standard dummy text ever since the 1500s, when an unknown <br>
-                                    printer took a galley of type and scrambled it to make a type <br>
-                                    specimen book. It has survived not only five centuries, <br>
-                                    but also the leap into electronic typesetting, <br>
-                                    remaining essentially unchanged. It was popularised in the 1960s <br>
-                                    with the release of Letraset sheets containing Lorem Ipsum passages, <br>
-                                    
+                                <div><img src="http://placekitten.com/150/150" alt=""></div>
+                                <h5>정예솔 Jeong yesol</h5>
+                                <p> 1986년 5월 23일<br>
+                                    경기도 용인시 기흥구<br>
+                                    경기도여성인력개발센터 웹퍼블리셔 과정 수료<br>
                                 </p>
                             </div>
+                            <ul>
+                                <li>
+                                    <h5>#노력하는</h5>
+                                    <p>노력하는 사람이 되겠다</p>
+                                </li>
+                                <li>
+                                    <h5>#노력하는</h5>
+                                    <p>노력하는 사람이 되겠다</p>
+                                </li>
+                                <li>
+                                    <h5>#노력하는</h5>
+                                    <p>노력하는 사람이 되겠다</p>
+                                </li>
+                            </ul>
                         </div>
                     </li>
                     <li class="about_skill">
@@ -484,31 +125,78 @@
                                 onclick="window.open('https://yesoljeong.github.io/ediya/') ">View</button>
                         </div>
                     </li>
-                    <li class="portfolio_navercorp"><a href="#">
-                            <!-- <img src="img/ediya.png" alt=""> -->
-                        </a>
+                    <li class="portfolio_ediya">
+                        <img src="img/ediya_site.png" alt="">
+                        <div class="portfolio_text">
+                            <h3>EDIYA COFFEE 반응형 페이지</h3>
+                            <h4>PC / Pad / Mobile 반응형 페이지 클론 코딩</h4>
+                            <p>html5 / css3 / javascript를 이용해 만들었습니다.</p>
+                            <button type="button"
+                                onclick="window.open('https://yesoljeong.github.io/ediya/') ">View</button>
+                        </div>
                     </li>
-                    <li class="portfolio_navercorp"><a href="#">
-                            <!-- <img src="img/ediya.png" alt=""> -->
-                        </a>
-                    </li>
+
                 </ul>
             </article>
             <article id="contact">
                 <h2>CONTACT</h2>
                 <div class='line'></div>
                 <ul>
-                    <li><a href="#">E-MAIL</a></li>
-                    <li><a href="#">PHONE</a></li>
-                    <li><a href="#">GITHUB</a></li>
+                    <li>
+                        <div><img src="img/mail.png" alt=""></div>
+                        <a href="mailto:yongssol@naver.com">yesol0523@gmail.com</a>
+                    </li>
+                    <li>
+                        <div><img src="img/phone.png" alt=""></div>
+                        <a href="tel:01044612232">Mobile</a>
+                    </li>
+                    <li>
+                        <div><img src="img/github.png" alt=""></div>
+                        <a href="https://github.com">GITHUB</a>
+                    </li>
                 </ul>
             </article>
         </section>
         <footer></footer>
     </div>
-    <script>
 
-    </script>
+
 </body>
+<script>
+    window.addEventListener('scroll', scrollWork, {
+        passive: true // 스크롤 성능 향상을 위한 옵션으로 true일 경우, 스크롤을 위해 블록되는 것을 방지한다. 사용하지 않을 경우 크롬에서 경고 발생
+    });
+
+    const html = document.querySelector('html');
+    const headerUl = document.querySelector('header ul');
+    console.log(headerUl.children[0].children[0].className)
+
+
+    function scrollWork() {
+        console.log(html.scrollTop)
+        // 스크롤이 어느정도 되면 headerA들에 하나씩 class on을 붙인다
+        // 스크롤탑이 740은 넘고 1630이하까지 되면 첫번째 A에 on을 붙인다
+        // 1640이 되면 두번째 A에 on을 붙인다
+        // 3215가 되면 세번째 A에 on을 붙인다 
+        if (html.scrollTop > 740 && html.scrollTop < 1600) {
+            headerUl.children[0].children[0].className = 'on'
+        } else {
+            headerUl.children[0].children[0].className = ''
+        }
+
+        if (html.scrollTop > 1600 && html.scrollTop < 3000) {
+            headerUl.children[1].children[0].className = 'on'
+        } else {
+            headerUl.children[1].children[0].className = ''
+        }
+
+        if (html.scrollTop > 3000) {
+            headerUl.children[2].children[0].className = 'on'
+        } else {
+            headerUl.children[2].children[0].className = ''
+        }
+    }
+</script>
+
 
 </html>

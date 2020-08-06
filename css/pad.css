@@ -29,6 +29,12 @@ header {
     left: 100px;
 }
 
+/* ABOUT */
+
+#about>ul{
+    width:90%;
+}
+
 #about ul li {
     flex: 100%;
 }

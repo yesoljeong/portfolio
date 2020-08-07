@@ -65,7 +65,7 @@ header ul li a.on {
     background-repeat: no-repeat;
     background-position: right bottom;
     margin: 0 auto;
-    background-color: #FFF2E6;
+    background-color: #000;
 }
 
 #main_visual .main_visual_text {
@@ -75,10 +75,9 @@ header ul li a.on {
     text-align: center;
     font-size: 500%;
     padding-top: 15%;
-    font-family: 'Noto Sans KR', sans-serif;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Rowdies', cursive;
     font-weight: 500;
-    color: #4C4C4C;
+    color: #fff;
 }
 
 #main_visual .main_visual_text p {

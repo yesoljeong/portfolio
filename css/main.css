@@ -2,6 +2,7 @@ html,
 body,
 .wrap {
     height: 100%;
+    background-color: #E1F5FC;
 }
 
 /* HEADER */
@@ -17,7 +18,7 @@ header {
     left: 0;
     right: 0;
     z-index: 1;
-    height:80px;
+    height: 80px;
 }
 
 header h1 {
@@ -60,12 +61,13 @@ header ul li a.on {
 #main_visual {
     width: 100%;
     height: 100%;
-    background: url('../img/main-visual1.png');
-    background-size: 80%;
+    background: url('../img/space-3262811_1920.jpg');
+    background-size: 100%;
     background-repeat: no-repeat;
     background-position: right bottom;
     margin: 0 auto;
-    background-color: #000;
+    background-color: #050641;
+    /* background-attachment: fixed; */
 }
 
 #main_visual .main_visual_text {
@@ -102,14 +104,14 @@ header ul li a.on {
 
     to {
         opacity: 0;
-        transform: rotate(120deg);
+        transform: rotate(80deg);
     }
 }
 
 #main_visual .star img:nth-child(1) {
-    top: 450px;
-    right: 100px;
-    width: 35px;
+    top: 200px;
+    right: 200px;
+    width: 25px;
     animation-name: star1;
     animation-duration: 1.7s;
 }
@@ -132,7 +134,7 @@ header ul li a.on {
 #main_visual .star img:nth-child(2) {
     top: 500px;
     left: 300px;
-    width: 40px;
+    width: 25px;
     animation-name: star2;
     animation-duration: 1.8s;
 }
@@ -148,14 +150,14 @@ header ul li a.on {
 
     to {
         opacity: 0;
-        transform: rotate(120deg);
+        transform: rotate(60deg);
     }
 }
 
 #main_visual .star img:nth-child(3) {
-    top: 100px;
-    left: 200px;
-    width: 30px;
+    top: 200px;
+    left: 500px;
+    width: 20px;
     animation-name: star3;
     animation-duration: 2s;
 }
@@ -164,7 +166,7 @@ header ul li a.on {
 #about,
 #contact {
     width: 100%;
-    background-color: #f5f2ef;
+    background-color: #E1F5FC;
     padding: 100px 0;
 }
 
@@ -208,11 +210,11 @@ section .line {
     letter-spacing: 1px;
     position: absolute;
     top: -50px;
-    padding:10px 20px;
-    background-color:#BEB4AC;
+    padding: 10px 20px;
+    background-color: #BEB4AC;
     border-radius: 10px 10px 0 10px;
     font-weight: 700;
-    color:#F5F2EF;
+    color: #F5F2EF;
     letter-spacing: 2px;
 }
 
@@ -276,8 +278,8 @@ section .line {
 }
 
 /* ABOUT SKILL */
-#about .about_skill{
-    position:relative;
+#about .about_skill {
+    position: relative;
 }
 
 #about .about_skill ul {
@@ -341,9 +343,9 @@ section .line {
 #portfolio ul li {
     display: flex;
     justify-content: space-around;
-    /* align-items: center; */
-    /* border: 1px solid blue; */
     margin-bottom: 100px;
+    background-color: #fff;
+    padding-top: 50px;
 }
 
 #portfolio ul li img {
@@ -356,7 +358,7 @@ section .line {
     /* border: 1px solid blue; */
     font-family: 'Noto Sans KR', sans-serif;
     font-family: 'Roboto', sans-serif;
-    margin-top:50px;
+    margin-top: 50px;
 }
 
 #portfolio ul li .portfolio_text h3 {
@@ -396,7 +398,7 @@ section .line {
 /* CONTACT SECTION */
 #contact {
     width: 100%;
-    background-color: #f5f2ef;
+    background-color: #006F8A;
     padding: 100px 0;
 }
 

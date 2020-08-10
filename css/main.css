@@ -22,11 +22,10 @@ header {
 }
 
 header h1 {
-    font-size: 0.8rem;
+    font-size: 15px;
     width: 60%;
     text-align: right;
-    font-family: 'Noto Sans KR', sans-serif;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Quantico', sans-serif;
     letter-spacing: 2px;
 }
 
@@ -40,21 +39,20 @@ header ul li {
 
 header ul li a {
     display: block;
-    color: #beb4ac;
-    font-size: 0.9rem;
+    color: rgb(0, 111, 138, 0.7);
+    font-size: 17px;
     font-weight: 700;
-    font-family: 'Noto Sans KR', sans-serif;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Quantico', sans-serif;
     padding: 20px 40px 20px 0;
     letter-spacing: 3px;
 }
 
 header ul li a:hover {
-    color: #877a6f;
+    color: rgb(0, 111, 138, 1);
 }
 
 header ul li a.on {
-    color: #877a6f;
+    color: rgb(0, 111, 138, 1);
 }
 
 /* main visual */
@@ -62,12 +60,12 @@ header ul li a.on {
     width: 100%;
     height: 100%;
     background: url('../img/space-3262811_1920.jpg');
-    background-size: 100%;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: right bottom;
     margin: 0 auto;
     background-color: #050641;
-    /* background-attachment: fixed; */
+    background-position: bottom center;
 }
 
 #main_visual .main_visual_text {
@@ -77,7 +75,7 @@ header ul li a.on {
     text-align: center;
     font-size: 500%;
     padding-top: 15%;
-    font-family: 'Rowdies', cursive;
+    font-family: 'Quantico', sans-serif;
     font-weight: 500;
     color: #fff;
 }
@@ -174,10 +172,9 @@ section h2 {
     text-align: center;
     font-size: 35px;
     font-weight: 700;
-    font-family: 'Noto Sans KR', sans-serif;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Quantico', sans-serif;
     letter-spacing: 2px;
-    color: #877A6F;
+    color: #006F8A;
 }
 
 section .line {
@@ -185,7 +182,6 @@ section .line {
     width: 120px;
     height: 1px;
     margin: 20px auto 50px auto;
-    /* border-radius: 10px; */
 }
 
 #about>ul {
@@ -196,22 +192,22 @@ section .line {
 #about>ul>li {
     background-color: #fff;
     border-radius: 10px;
-    padding: 20px;
+    padding: 80px 20px;
     margin-bottom: 50px;
+    border: 5px dashed #006F8A;
 }
 
 #about ul li h3 {
     font-size: 1.1rem;
     text-align: left;
     font-weight: 300;
-    font-family: 'Noto Sans KR', sans-serif;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Quantico', sans-serif;
     margin: 30px auto;
     letter-spacing: 1px;
     position: absolute;
     top: -50px;
     padding: 10px 20px;
-    background-color: #BEB4AC;
+    background-color: #006F8A;
     border-radius: 10px 10px 0 10px;
     font-weight: 700;
     color: #F5F2EF;
@@ -239,7 +235,6 @@ section .line {
 }
 
 #about .about_profile .profile_img_text>div {
-    /* border: 1px solid #beb4ac; */
     width: 40%;
     margin: 0 auto 20px auto;
     text-align: center;
@@ -250,7 +245,6 @@ section .line {
 
 #about .about_profile .profile_img_text img {
     border-radius: 60%;
-    /* border: 1px solid red; */
     margin: 0 auto 30px auto;
 }
 
@@ -264,7 +258,6 @@ section .line {
 }
 
 #about .about_profile .profile_img_text ul {
-    /* border: 1px solid red; */
     width: 50%;
 }
 
@@ -274,7 +267,6 @@ section .line {
 
 #about .about_profile .profile_img_text ul li:last-child {
     margin-bottom: 0;
-    /* border: 1px solid lime */
 }
 
 /* ABOUT SKILL */
@@ -283,8 +275,6 @@ section .line {
 }
 
 #about .about_skill ul {
-    /* width:80%; */
-    /* border: 1px solid red; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -292,12 +282,11 @@ section .line {
 }
 
 #about .about_skill ul li {
-    /* border:1px solid lime; */
     margin: 0 auto;
 }
 
 #about .about_skill ul li div:nth-child(1) {
-    background-color: #beb4ac;
+    background-color: #FEF8E0;
     background-size: 65px;
     background-repeat: no-repeat;
     background-position: center;
@@ -322,7 +311,6 @@ section .line {
 #about .about_skill ul li .skill_desc {
     font-family: 'Noto Sans KR', sans-serif;
     font-family: 'Roboto', sans-serif;
-    /* border:1px solid red; */
 }
 
 #about .about_skill ul li .skill_desc p {
@@ -334,6 +322,7 @@ section .line {
 #portfolio {
     width: 100%;
     padding: 100px 0;
+    background-color: #fff;
 }
 
 #portfolio ul {
@@ -344,18 +333,16 @@ section .line {
     display: flex;
     justify-content: space-around;
     margin-bottom: 100px;
-    background-color: #fff;
     padding-top: 50px;
 }
 
 #portfolio ul li img {
     background: #fff;
-    width: 40%;
+    width: 35%;
 }
 
 #portfolio ul li .portfolio_text {
-    width: 40%;
-    /* border: 1px solid blue; */
+    width: 30%;
     font-family: 'Noto Sans KR', sans-serif;
     font-family: 'Roboto', sans-serif;
     margin-top: 50px;
@@ -380,11 +367,15 @@ section .line {
 #portfolio ul li .portfolio_text button {
     padding: 10px 80px;
     font-size: 20px;
-    background-color: #877a6f;
+    background-color: rgba(0, 111, 138, 0.7);
     border: 1px solid grey;
     cursor: pointer;
-    color: #beb4ac;
+    color: #fff;
     border-radius: 10px;
+}
+
+#portfolio ul li .portfolio_text button:hover {
+    background-color: rgba(0, 111, 138, 1);
 }
 
 #portfolio ul li.portfolio_linefriend {
@@ -398,7 +389,7 @@ section .line {
 /* CONTACT SECTION */
 #contact {
     width: 100%;
-    background-color: #006F8A;
+    background-color: #E1F5FC;
     padding: 100px 0;
 }
 
@@ -409,13 +400,12 @@ section .line {
     margin: 0 auto;
     width: 1000px;
     margin-bottom: 100px;
-    /* border:1px solid green; */
 }
 
 #contact ul li {
     width: 25%;
     height: 200px;
-    border: 5px solid #BEB4AC;
+    border: 5px solid #006F8A;
     border-radius: 15px;
     padding: 40px 0;
 }
@@ -424,7 +414,6 @@ section .line {
     font-weight: 100;
     display: block;
     margin: 0 auto;
-    /* border: 1px solid red; */
     text-align: center;
     padding: 20px;
     color: #000;
@@ -436,7 +425,6 @@ section .line {
 #contact ul div {
     width: 80px;
     margin: 0 auto;
-    /* border: 1px solid red; */
 }
 
 #contact ul div img {
@@ -445,5 +433,5 @@ section .line {
 
 footer {
     height: 200px;
-    background: #BEB4AC;
+    background: #006F8A;
 }

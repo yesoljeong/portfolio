@@ -6,12 +6,12 @@ header {
 /* main visual */
 #main_visual {
     background-size: cover;
-    /* height: 100vw; */
 }
 
 #main_visual .main_visual_text {
     width: 100%;
-    /* font-size: 100px; */
+    border:1px solid red;
+    margin-top:50px;
 }
 
 #main_visual .main_visual_text p {
@@ -20,13 +20,16 @@ header {
 }
 
 #main_visual .star img:nth-child(1) {
-    top: 200px;
-
+    top: 400px;
 }
 
 #main_visual .star img:nth-child(2) {
     top: 300px;
     left: 100px;
+}
+
+#main_visual .star img:nth-child(3) {
+    top: 600px;
 }
 
 /* ABOUT */

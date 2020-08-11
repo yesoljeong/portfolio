@@ -27,6 +27,8 @@ header h1 {
     text-align: right;
     font-family: 'Quantico', sans-serif;
     letter-spacing: 2px;
+    color: #006F8A;
+    font-weight: 900;
 }
 
 header ul {
@@ -160,32 +162,37 @@ header ul li a.on {
     animation-duration: 2s;
 }
 
-@keyframes roket {
+@keyframes rocket {
     0% {
         opacity: 0;
         bottom: 100px;
         right: 100px;
     }
 
-    50% {
+    30% {
         opacity: 1;
         transform: scale(1.2);
-        bottom: 350px;
-        right: 300px;
-        transform: rotate(-40deg);
+        bottom: 50%;
+        right: 15%;
+        transform: rotate(-30deg);
+    }
+
+    70% {
+        bottom: 70%;
+        transform: rotate(-90deg);
     }
 
     100% {
         opacity: 0;
-        bottom: 400px;
-        right: 700px;
-        transform: rotate(-80deg);
+        bottom: 60%;
+        right: 80%;
+        transform: rotate(-110deg);
     }
 }
 
 #main_visual .star img:nth-child(4) {
     width: 50px;
-    animation-name: roket;
+    animation-name: rocket;
     animation-duration: 5s;
 }
 
@@ -354,15 +361,13 @@ section .line {
     background-color: #fff;
 }
 
-#portfolio ul {
-    margin: 100px auto;
-}
-
 #portfolio ul li {
     display: flex;
     justify-content: space-around;
     margin-bottom: 100px;
     padding-top: 50px;
+    width: 80%;
+    margin: 0 auto;
 }
 
 #portfolio ul li img {
@@ -371,7 +376,7 @@ section .line {
 }
 
 #portfolio ul li .portfolio_text {
-    width: 30%;
+    width: 40%;
     font-family: 'Noto Sans KR', sans-serif;
     font-family: 'Roboto', sans-serif;
     margin-top: 50px;
@@ -391,6 +396,7 @@ section .line {
 
 #portfolio ul li .portfolio_text p {
     margin-bottom: 50px;
+    line-height: 25px;
 }
 
 #portfolio ul li .portfolio_text button {
@@ -418,6 +424,7 @@ section .line {
 /* CONTACT SECTION */
 #contact {
     width: 100%;
+    height:550px;
     background-color: #E1F5FC;
     padding: 100px 0;
 }
@@ -429,38 +436,97 @@ section .line {
     margin: 0 auto;
     width: 1000px;
     margin-bottom: 100px;
+    position: relative;
+    /* border:1px solid red; */
 }
 
 #contact ul li {
-    width: 25%;
-    height: 200px;
-    border: 5px solid #006F8A;
-    border-radius: 15px;
+    width: 250px;
+    height: 250px;
+    background-color: #006F8A;
+    border-radius: 50%;
     padding: 40px 0;
+    position: absolute;
+    top:100px;
+    bottom:-50px;
+    z-index: 100;
+    opacity: 0.1;
 }
 
-#contact ul li a {
+#contact ul li.ani{
+    opacity: 1;
+    top:0;
+    transition: all .5s ease;
+}
+
+#contact ul li:nth-child(2) {
+    left:50%;
+    transform: translate(-50%);
+    transition-delay: .2s;
+}
+
+#contact ul li:nth-child(3) {
+    right:0;
+    transition-delay: .4s;
+}
+
+/* #contact ul li::before {
+    position: absolute;
+    top: 0;
+    content: "";
+    display: block;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background-color: gray;
+    opacity: 0.7;
+} */
+
+#contact ul li:hover {
+    animation-name: contact-ani;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-duration: .5s;
+}
+
+@keyframes contact-ani {
+    0% {
+        top:-10px;
+    }
+
+    100% {
+        top:0
+    }
+}
+
+#contact ul li div {
+    margin: 30px 0 10px 0;
+    text-align: center;
+}
+
+#contact ul li i {
+    color: #fff;
+    margin: 0 auto;
+}
+
+#contact ul li a p {
     font-weight: 100;
     display: block;
     margin: 0 auto;
     text-align: center;
     padding: 20px;
-    color: #000;
+    color: #fff;
     font-family: 'Noto Sans KR', sans-serif;
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
 }
 
-#contact ul div {
-    width: 80px;
-    margin: 0 auto;
-}
-
-#contact ul div img {
-    width: 80px;
-}
-
+/* FOOTER */
 footer {
     height: 200px;
     background: #006F8A;
+    color: #fff;
+    text-align: center;
+    padding-top: 100px;
 }

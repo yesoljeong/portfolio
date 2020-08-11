@@ -253,7 +253,7 @@ section .line {
 #about h5 {
     margin-bottom: 10px;
     text-align: center;
-    font-weight: 900;
+    font-weight: 700;
     font-size: 17px;
 }
 
@@ -267,7 +267,6 @@ section .line {
     justify-content: space-around;
     align-items: flex-start;
     font-family: 'Noto Sans KR', sans-serif;
-    font-family: 'Roboto', sans-serif;
 }
 
 #about .about_profile .profile_img_text>div {
@@ -290,7 +289,8 @@ section .line {
 
 #about .about_profile .profile_img_text p {
     line-height: 30px;
-    font-size: 14px;
+    font-size: 15px;
+    font-weight: 300;
 }
 
 #about .about_profile .profile_img_text ul {
@@ -313,12 +313,12 @@ section .line {
 #about .about_skill ul {
     display: flex;
     justify-content: center;
-    align-items: center;
     margin: 0 auto;
 }
 
 #about .about_skill ul li {
     margin: 0 auto;
+    width:30%;
 }
 
 #about .about_skill ul li div:nth-child(1) {
@@ -330,6 +330,7 @@ section .line {
     height: 140px;
     margin: 0 auto 30px auto;
     border-radius: 50%;
+    box-shadow: 1px 1px 10px 1px gray;
 }
 
 #about .about_skill ul li .html_icon {
@@ -346,12 +347,11 @@ section .line {
 
 #about .about_skill ul li .skill_desc {
     font-family: 'Noto Sans KR', sans-serif;
-    font-family: 'Roboto', sans-serif;
 }
 
 #about .about_skill ul li .skill_desc p {
     line-height: 25px;
-    font-size: 14px;
+    font-size: 15px;
 }
 
 /* PORTFOLIO SECTION */
@@ -378,7 +378,6 @@ section .line {
 #portfolio ul li .portfolio_text {
     width: 40%;
     font-family: 'Noto Sans KR', sans-serif;
-    font-family: 'Roboto', sans-serif;
     margin-top: 50px;
 }
 
@@ -413,11 +412,11 @@ section .line {
     background-color: rgba(0, 111, 138, 1);
 }
 
-#portfolio ul li.portfolio_linefriend {
+#portfolio ul li:nth-child(2n) {
     flex-direction: row-reverse;
 }
 
-#portfolio ul li.portfolio_linefriend .portfolio_text {
+#portfolio ul li:nth-child(2n).portfolio_text {
     text-align: right;
 }
 
@@ -449,7 +448,6 @@ section .line {
     position: absolute;
     top:100px;
     bottom:-50px;
-    z-index: 100;
     opacity: 0.1;
 }
 
@@ -518,7 +516,6 @@ section .line {
     padding: 20px;
     color: #fff;
     font-family: 'Noto Sans KR', sans-serif;
-    font-family: 'Roboto', sans-serif;
     font-weight: 300;
 }
 

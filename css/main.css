@@ -214,7 +214,7 @@ section h2 {
 }
 
 section .line {
-    background: linear-gradient(to right, #beb4ac, #877a6f, #beb4ac);
+    background: linear-gradient(to right, #B8E9F0, #006F8A, #B8E9F0);
     width: 120px;
     height: 1px;
     margin: 20px auto 50px auto;
@@ -255,6 +255,13 @@ section .line {
     text-align: center;
     font-weight: 700;
     font-size: 17px;
+    color:#4791AE;
+}
+
+#about p{
+    line-height: 28px;
+    font-size: 15px;
+    font-weight: 300;
 }
 
 /* ABOUT PROFILE */
@@ -275,22 +282,21 @@ section .line {
     text-align: center;
     background-color: #fff;
     border-radius: 10px;
-    padding: 20px 0;
 }
 
-#about .about_profile .profile_img_text img {
+#about .about_profile .profile_img_text .profile_img{
+    background-image: url('../img/yesol.jpg');
+    background-repeat: no-repeat;
+    background-size:350px;
+    background-position: -150px -50px;
     border-radius: 60%;
     margin: 0 auto 30px auto;
+    width:200px;
+    height:200px;
 }
 
 #about .about_profile .profile_img_text ul h5 {
     text-align: left;
-}
-
-#about .about_profile .profile_img_text p {
-    line-height: 30px;
-    font-size: 15px;
-    font-weight: 300;
 }
 
 #about .about_profile .profile_img_text ul {
@@ -349,10 +355,6 @@ section .line {
     font-family: 'Noto Sans KR', sans-serif;
 }
 
-#about .about_skill ul li .skill_desc p {
-    line-height: 25px;
-    font-size: 15px;
-}
 
 /* PORTFOLIO SECTION */
 #portfolio {
@@ -377,7 +379,6 @@ section .line {
 
 #portfolio ul li .portfolio_text {
     width: 40%;
-    font-family: 'Noto Sans KR', sans-serif;
     margin-top: 50px;
 }
 
@@ -386,16 +387,21 @@ section .line {
     margin-bottom: 20px;
     font-weight: 700;
     letter-spacing: 1px;
+    font-family: 'Noto Sans KR', sans-serif;
+    color:#4791AE;
 }
 
 #portfolio ul li .portfolio_text h4 {
     font-size: 20px;
     margin-bottom: 20px;
+    font-family: 'Noto Sans KR', sans-serif;
 }
 
 #portfolio ul li .portfolio_text p {
     margin-bottom: 50px;
     line-height: 25px;
+    font-weight: 300;
+    font-family: 'Noto Sans KR', sans-serif;
 }
 
 #portfolio ul li .portfolio_text button {
@@ -436,7 +442,6 @@ section .line {
     width: 1000px;
     margin-bottom: 100px;
     position: relative;
-    /* border:1px solid red; */
 }
 
 #contact ul li {
@@ -526,4 +531,5 @@ footer {
     color: #fff;
     text-align: center;
     padding-top: 100px;
+    font-family: 'Noto Sans KR', sans-serif;
 }

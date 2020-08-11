@@ -28,6 +28,7 @@ header {
 }
 
 #main_visual .star img:nth-child(3) {
+    left:200px;
     top: 600px;
 }
 
@@ -61,16 +62,13 @@ header {
 #portfolio ul li .portfolio_text h4 {
     font-size: 18px;
     line-height: 25px;
-    /* border: 1px solid red; */
 }
 
 #portfolio ul li .portfolio_text p {
     font-size: 15px;
-    /* border: 1px solid blue; */
 }
 
 /* CONTACT */
 #contact ul {
     width: 90%;
-    /* border: 1px solid red; */
 }

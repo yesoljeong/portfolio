@@ -382,6 +382,10 @@ section .line {
     margin-top: 50px;
 }
 
+#portfolio ul li:nth-child(2n) .portfolio_text{
+    text-align: right;
+}
+
 #portfolio ul li .portfolio_text h3 {
     font-size: 30px;
     margin-bottom: 20px;

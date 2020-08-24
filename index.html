@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" media="screen and (max-width: 980px)" href="css/pad.css">
     <link rel="stylesheet" media="screen and (max-width: 640px)" href="css/mobile.css">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap"
         rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
@@ -19,6 +20,11 @@
     <div class="wrap">
         <header>
             <h1>JEONG YESOL</h1>
+            <a href="">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
             <ul>
                 <li><a href="#about">ABOUT</a></li>
                 <li><a href="#portfolio">PORTFOLIO</a></li>
@@ -204,7 +210,6 @@
     console.log(contactLis)
 
     function scrollWork() {
-        console.log(html.scrollTop)
         // 스크롤이 어느정도 되면 headerA들에 하나씩 class on을 붙인다
         // 스크롤탑이 740은 넘고 1630이하까지 되면 첫번째 A에 on을 붙인다
         // 1640이 되면 두번째 A에 on을 붙인다
@@ -224,17 +229,29 @@
         if (html.scrollTop > 3500) {
 
             headerUl.children[2].children[0].className = 'on'
-            for(let i=0 ; i<contactLis.length; i++){
+            for (let i = 0; i < contactLis.length; i++) {
                 contactLis[i].classList.add('ani')
             }
         } else {
             headerUl.children[2].children[0].className = ''
-            for(let i=0 ; i<contactLis.length; i++){
+            for (let i = 0; i < contactLis.length; i++) {
                 contactLis[i].classList.remove('ani')
             }
         }
     }
-</script>
 
+    const headerABtn = document.querySelector('header a')
+
+    headerABtn.addEventListener('click', headerBtn);
+
+    function headerBtn(e) {
+        e.preventDefault()
+        if(headerABtn.classList.contains('on')){
+            headerABtn.classList.remove('on')
+        }else{
+            headerABtn.classList.add('on')
+        }
+    }
+</script>
 
 </html>

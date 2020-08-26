@@ -20,7 +20,7 @@
     <div class="wrap">
         <header>
             <h1>JEONG YESOL</h1>
-            <a href="">
+            <a href="" class="hambuger">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -206,8 +206,7 @@
 
     const html = document.querySelector('html');
     const headerUl = document.querySelector('header ul');
-    const contactLis = document.querySelectorAll('#contact li')
-    console.log(contactLis)
+    const contactLis = document.querySelectorAll('#contact li');
 
     function scrollWork() {
         // 스크롤이 어느정도 되면 headerA들에 하나씩 class on을 붙인다
@@ -227,7 +226,6 @@
         }
 
         if (html.scrollTop > 3500) {
-
             headerUl.children[2].children[0].className = 'on'
             for (let i = 0; i < contactLis.length; i++) {
                 contactLis[i].classList.add('ani')
@@ -240,18 +238,22 @@
         }
     }
 
-    const headerABtn = document.querySelector('header a')
+    const headerABtn = document.querySelector('header .hambuger');
+    // console.log(headerABtn)
 
     headerABtn.addEventListener('click', headerBtn);
 
     function headerBtn(e) {
         e.preventDefault()
         if(headerABtn.classList.contains('on')){
-            headerABtn.classList.remove('on')
+            headerABtn.classList.remove('on');
+            headerUl.classList.remove('on');
         }else{
-            headerABtn.classList.add('on')
+            headerABtn.classList.add('on');
+            headerUl.classList.add('on');
         }
     }
+
 </script>
 
 </html>

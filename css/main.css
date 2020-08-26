@@ -29,6 +29,8 @@ header h1 {
     letter-spacing: 2px;
     color: #006F8A;
     font-weight: 900;
+    position: absolute;
+    right:30px;
 }
 
 header button{
@@ -37,6 +39,8 @@ header button{
 
 header ul {
     display: flex;
+    position: absolute;
+    left:30px;
 }
 
 header ul li {

@@ -1,9 +1,9 @@
 /* HEADER */
 header {
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
-header a {
+header .hambuger {
     display: block;
     position: absolute;
     left: 20px;
@@ -51,13 +51,27 @@ header a span:nth-child(3) {
 }
 
 header ul {
-    border: 1px solid red;
-    flex-flow: column;
     display: none;
+    flex-flow: column;
+    position: absolute;
+    top:80px;
+    left:-1000px;
+    transition: all .5s linear;
+    opacity: 0;
+    width:0;
 }
 
 header ul.on {
-    display: block;
+    display:block;
+    background-color:#fff;
+    width:100%;
+    left:0;
+    opacity: 1;
+}
+
+header ul li{
+    border:1px solid red;
+    padding-left:20px;
 }
 
 header h1{

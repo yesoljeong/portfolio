@@ -106,10 +106,6 @@ header h1{
     padding: 10px;
 }
 
-#portfolio ul li .portfolio_text button {
-    border: 1px solid red;
-}
-
 #about .about_skill ul {
     flex-flow: column;
 }
@@ -132,6 +128,7 @@ header h1{
 
 #portfolio ul li img {
     margin: 0 auto;
+    width:80%;
 }
 
 #portfolio ul li .portfolio_text {
@@ -139,12 +136,23 @@ header h1{
     margin: 50px auto;
 }
 
+#portfolio ul li .portfolio_text,
+#portfolio ul li:nth-child(2n) .portfolio_text{
+    text-align: center;
+}
+
+#portfolio ul li .portfolio_text h3{
+    margin-bottom: 10px;
+}
+
 #portfolio ul li .portfolio_text h4 {
     font-size: 16px;
+    margin-bottom: 10px;
 }
 
 #portfolio ul li .portfolio_text p {
     margin-bottom: 10px;
+    font-size:13px;
 }
 
 /* CONTACT */

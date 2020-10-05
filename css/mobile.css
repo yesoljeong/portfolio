@@ -70,7 +70,7 @@ header ul.on {
 }
 
 header ul li{
-    border:1px solid red;
+    /* border:1px solid red; */
     padding-left:20px;
 }
 

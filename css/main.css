@@ -229,7 +229,7 @@ section .line {
 }
 
 #about>ul {
-    width: 70%;
+    /* width: 70%; */
     margin: 0 auto;
 }
 
@@ -238,7 +238,7 @@ section .line {
     border-radius: 10px;
     padding: 80px 20px;
     margin-bottom: 50px;
-    border: 5px dashed #006F8A;
+    /* border: 5px dashed #006F8A; */
 }
 
 #about ul li h3 {
@@ -278,41 +278,27 @@ section .line {
 }
 
 #about .about_profile .profile_img_text {
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
+    /* display: flex; */
+    /* justify-content: space-around;
+    align-items: flex-start; */
     font-family: 'Noto Sans KR', sans-serif;
-}
-
-#about .about_profile .profile_img_text>div {
-    width: 40%;
-    margin: 0 auto 20px auto;
-    text-align: center;
-    background-color: #fff;
-    border-radius: 10px;
-}
-
-#about .about_profile .profile_img_text .profile_img{
-    background-image: url('../img/yesol.jpg');
-    background-repeat: no-repeat;
-    background-size:350px;
-    background-position: -150px -50px;
-    border-radius: 60%;
-    margin: 0 auto 30px auto;
-    width:200px;
-    height:200px;
 }
 
 #about .about_profile .profile_img_text ul h5 {
     text-align: left;
 }
 
-#about .about_profile .profile_img_text ul {
-    width: 50%;
+#about .about_profile .profile_img_text ul, #about .about_skill ul {
+    width: 70%;
+    display: flex;
+    border: 1px solid black;
+    justify-content: space-between;
+    margin: 0 auto;
 }
 
-#about .about_profile .profile_img_text ul li {
-    margin-bottom: 50px;
+#about .about_profile li, #about .about_skill li  {
+    border: 1px solid red;
+    width: 30%;
 }
 
 #about .about_profile .profile_img_text ul li:last-child {
@@ -322,17 +308,6 @@ section .line {
 /* ABOUT SKILL */
 #about .about_skill {
     position: relative;
-}
-
-#about .about_skill ul {
-    display: flex;
-    justify-content: center;
-    margin: 0 auto;
-}
-
-#about .about_skill ul li {
-    margin: 0 auto;
-    width:30%;
 }
 
 #about .about_skill ul li div:nth-child(1) {
@@ -357,6 +332,12 @@ section .line {
 
 #about .about_skill ul li .js_icon {
     background-image: url('../img/js_icon.png');
+}
+
+section #about .about_skill ul li .dart_icon {
+    background-image: url('../img/dart_icon.png');
+    border: 1px solid red;
+    /* background-position: ; */
 }
 
 #about .about_skill ul li .skill_desc {

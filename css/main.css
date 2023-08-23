@@ -311,18 +311,6 @@ section .line {
     background-color: #E1F5FC;
 }
 
-/* #about .about_skill ul li div:nth-child(1) {
-    background-color: #FEF8E0;
-    background-size: 65px;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 140px;
-    height: 140px;
-    margin: 0 auto 30px auto;
-    border-radius: 50%;
-    box-shadow: 1px 1px 10px 1px gray;
-} */
-
 #about .about_skill .progras_back{
     position: relative;
     display:inline-block;
@@ -350,13 +338,6 @@ section .line {
      transform: translate(-50%, -50%);
 }
 
-:root {
-    --green: #006450;
-    --red: #ff4a50;
-    --yellow: #f2d832;
-    --font: 'Klee One', cursive;
-  }
-
   .circle {
     cursor: pointer;
     margin: 1rem;
@@ -365,6 +346,7 @@ section .line {
     border-radius: 50%;
     position: relative;
   }
+
   .pie {
     width: 120px;
     height: 120px;
@@ -374,11 +356,15 @@ section .line {
     left: 50%;
     transform: translate(-50%, -50%) rotate(-90deg);
   }
+
   circle {
     fill: none;
     stroke: rgb(243, 243, 243);
     stroke-width: 14;
+    display: block;
+    border: 1px solid red;
   }
+
   circle:nth-child(2) {
     stroke: rgba(0, 111, 138, 0.7);
     stroke-dashoffset: 316px;
@@ -402,13 +388,18 @@ section .line {
   .circle_4.on circle:nth-child(2) {
     stroke-dashoffset: calc(332px - 332px * 80 / 100);
   }
+
+  .circle_5.on circle:nth-child(2) {
+    stroke-dashoffset: calc(332px - 332px * 80 / 100);
+  }
+
   .wrap_txt {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
-
+  
 /* .progras_back{
     animation: pie1 0.5s forwards;
   }

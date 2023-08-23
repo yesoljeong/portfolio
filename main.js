@@ -1,21 +1,81 @@
-// 스킬 요소 추가
-const skillLi = document.createElement("li");
-const skillDiv = document.createElement("div");
-const skillTextDiv = document.createElement("div");
-const skillSvg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-const skillCircle1 = document.createElementNS("http://www.w3.org/2000/svg", "circle");
-const skillCircle2 = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+window.addEventListener("scroll", scrollWork, {
+    passive: true, // 스크롤 성능 향상을 위한 옵션으로 true일 경우, 스크롤을 위해 블록되는 것을 방지한다. 사용하지 않을 경우 크롬에서 경고 발생
+});
+
+const html = document.querySelector("html");
+const headerUl = document.querySelector("header ul");
+const contactLis = document.querySelectorAll("#contact li");
+
+function scrollWork() {
+    // 스크롤이 어느정도 되면 headerA들에 하나씩 class on을 붙인다
+    // 스크롤탑이 740은 넘고 1630이하까지 되면 첫번째 A에 on을 붙인다
+    // 1640이 되면 두번째 A에 on을 붙인다
+    // 3215가 되면 세번째 A에 on을 붙인다
+    if (html.scrollTop > 740 && html.scrollTop < 1600) {
+        headerUl.children[0].children[0].className = "on";
+    } else {
+        headerUl.children[0].children[0].className = "";
+    }
+
+    if (html.scrollTop > 1600 && html.scrollTop < 3000) {
+        headerUl.children[1].children[0].className = "on";
+    } else {
+        headerUl.children[1].children[0].className = "";
+    }
+
+    if (html.scrollTop > 3500) {
+        headerUl.children[2].children[0].className = "on";
+        for (let i = 0; i < contactLis.length; i++) {
+            contactLis[i].classList.add("ani");
+        }
+    } else {
+        headerUl.children[2].children[0].className = "";
+        for (let i = 0; i < contactLis.length; i++) {
+            contactLis[i].classList.remove("ani");
+        }
+    }
+}
+
+const headerABtn = document.querySelector("header .hambuger");
+// console.log(headerABtn)
+
+headerABtn.addEventListener("click", headerBtn);
+
+function headerBtn(e) {
+    e.preventDefault();
+    if (headerABtn.classList.contains("on")) {
+        headerABtn.classList.remove("on");
+        headerUl.classList.remove("on");
+    } else {
+        headerABtn.classList.add("on");
+        headerUl.classList.add("on");
+    }
+}
 
 const skillCircleWrap = document.querySelector(".circle_wrap");
+const portfolioWrap = document.querySelector(".portfolio_wrap");
 
-// console.log(skillCircleWrap);
+// 스킬 요소 추가
+const skillsArr = ["html", "css", "javscript", "dart"];
+const skillsPoint = ["90", "80", "70", "50"];
 
-skillCircleWrap.appendChild(skillLi);
-skillLi.appendChild(skillDiv);
-skillLi.appendChild(skillTextDiv);
-skillDiv.appendChild(skillSvg);
-skillSvg.appendChild(skillCircle1);
-skillSvg.appendChild(skillCircle2);
+for (let i = 0; i < skillsArr.length; i++) {
+    const skillLi = document.createElement("li");
+    const skillDiv = document.createElement("div");
+    const skillTextDiv = document.createElement("div");
+    const skillSvg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    const skillCircle1 = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+    const skillCircle2 = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+
+    skillCircleWrap.appendChild(skillLi);
+    skillLi.appendChild(skillDiv);
+    skillLi.appendChild(skillTextDiv);
+    skillDiv.appendChild(skillSvg);
+    skillSvg.appendChild(skillCircle1);
+    skillSvg.appendChild(skillCircle2);
+
+    // console.log(circleTextDivs[0]);
+}
 
 const circleLis = skillCircleWrap.querySelectorAll("li");
 const circleDivs = skillCircleWrap.querySelectorAll("div:nth-child(1)");
@@ -32,11 +92,8 @@ for (let i = 0; i < circleDivs.length; i++) {
 
 for (let i = 0; i < circleTextDivs.length; i++) {
     circleTextDivs[i].classList.add("wrap_txt", "counter");
-    circleTextDivs[i].textContent = "js에서";
+    circleTextDivs[i].textContent = `${skillsArr[i]}`;
 }
-
-// circleCircles[9].cx.animVal.value = "60";
-console.log(circleCircles[0].style);
 
 for (let i = 0; i < circleCircles.length; i++) {
     circleCircles[i].style.cx = "60";
@@ -45,7 +102,6 @@ for (let i = 0; i < circleCircles.length; i++) {
 }
 
 // 스킬 애니메이션 동작
-
 const circles = document.querySelectorAll(".circle");
 
 window.addEventListener("scroll", function () {
@@ -55,3 +111,44 @@ window.addEventListener("scroll", function () {
         }
     }
 });
+
+// 포트폴리오 요소 추가
+
+const portfolioLi = document.createElement("li");
+const portfolioImgDiv = document.createElement("div");
+const portfolioTextDiv = document.createElement("div");
+const portfolioImg = document.createElement("img");
+
+const portfolioList = ["ediya", "naver", "29cm", "3min", "line", "ediya", "ediya"];
+const portfolioTextList = ["clone / ediya", "naver", "29cm", "3min", "line", "ediya", "ediya"];
+const portfolioLinkList = ["ediya", "line-friends", "29CM", "unnis_info", "line", "ediya", "ediya"];
+
+for (let i = 0; i < portfolioList.length; i++) {
+    const portfolioLi = document.createElement("li");
+    const portfolioImgDiv = document.createElement("div");
+    const portfolioTextDiv = document.createElement("div");
+    const portfolioImg = document.createElement("img");
+
+    portfolioWrap.appendChild(portfolioLi);
+    portfolioLi.appendChild(portfolioImgDiv);
+    portfolioImgDiv.appendChild(portfolioImg);
+    portfolioLi.appendChild(portfolioTextDiv);
+}
+
+const portfolioImgs = portfolioWrap.querySelectorAll("img");
+const portfolioTexts = portfolioWrap.querySelectorAll("div:nth-child(2)");
+const portfolioDivs = portfolioWrap.querySelectorAll("div:nth-child(1)");
+
+console.log(portfolioDivs[0].setAttribute);
+
+for (let i = 0; i < portfolioImgs.length; i++) {
+    portfolioImgs[i].src = `/img/${portfolioList[i]}.png`;
+    portfolioTexts[i].textContent = `${portfolioTextList[i]}`;
+    portfolioDivs[i].setAttribute(
+        "onClick",
+        `location.href='https://yesoljeong.github.io/${portfolioLinkList[i]}';`
+    );
+}
+
+// const portfolioImgs = portfolioWrap.querySelectorAll("img");
+// console.log(portfolioImgs);

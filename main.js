@@ -155,8 +155,9 @@ const portfolioDivs = portfolioWrap.querySelectorAll("div:nth-child(1)");
 
 console.log(portfolioDivs[0].setAttribute);
 
+let path = window.location.origin.includes("127.0.0.1") ? "" : "/portfolio";
 for (let i = 0; i < portfolioImgs.length; i++) {
-    portfolioImgs[i].src = window.location.origin + `/img/${portfolioList[i]}.png`;
+    portfolioImgs[i].src = path + `/img/${portfolioList[i]}.png`;
     portfolioTexts[i].textContent = `${portfolioTextList[i]}`;
     portfolioDivs[i].setAttribute("onClick", `location.href='${portfolioLinkList[i]}';`);
 }

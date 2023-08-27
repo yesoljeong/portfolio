@@ -34,11 +34,11 @@ header {
 
 /* ABOUT */
 #about>ul {
-    width: 90%;
+    width: 100%;
 }
 
-#about ul li {
-    flex: 100%;
+#about .about_profile .profile_img_text ul, #about .about_skill ul{
+    width: 100%;
 }
 
 #portfolio ul li {
@@ -47,7 +47,7 @@ header {
 
 #portfolio ul li img {
     background: #fff;
-    width: 50%;
+    width: 80%;
     margin: 0 30px;
 }
 
@@ -68,7 +68,14 @@ header {
     font-size: 15px;
 }
 
+/* Portfolio */
+#portfolio ul{
+    width: 100%;
+    grid-template-rows: repeat(2, 400px);
+    grid-template-columns: repeat(2, 1fr);
+}
+
 /* CONTACT */
 #contact ul {
-    width: 90%;
+    width: 100%;
 }

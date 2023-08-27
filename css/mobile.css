@@ -96,18 +96,23 @@ header h1{
 }
 
 #about .about_profile .profile_img_text ul {
-    width: 85%;
+    width: 100%;
     margin: 0 auto;
+    display: block
 }
 
 #about .about_profile .profile_img_text ul li {
-    text-align: center;
-    background-color: #E1F5FC;
+    text-align: left;
+    /* background-color: #E1F5FC; */
     padding: 10px;
+    width: 100%;
 }
 
 #about .about_skill ul {
-    flex-flow: column;
+    display: grid;
+    width: 100%;
+    grid-template-rows: repeat(2, 150px);
+    grid-template-columns: repeat(2, 1fr);
 }
 
 #about .about_skill ul li {
@@ -155,6 +160,16 @@ header h1{
     font-size:13px;
 }
 
+#portfolio ul{
+    display: block;
+    /* grid-template-rows: repeat(2, 300px); */
+    /* grid-template-columns: repeat(1, 1fr); */
+}
+
+#portfolio ul li{
+    margin-bottom: 80px;
+}
+
 /* CONTACT */
 #contact {
     height: 100%;
@@ -165,6 +180,7 @@ header h1{
 #contact ul li.ani {
     position: static;
     flex-flow: column;
+    margin-bottom: 0;
 }
 
 #contact ul li:nth-child(1),

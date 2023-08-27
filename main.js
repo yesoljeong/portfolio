@@ -11,19 +11,22 @@ function scrollWork() {
     // 스크롤탑이 740은 넘고 1630이하까지 되면 첫번째 A에 on을 붙인다
     // 1640이 되면 두번째 A에 on을 붙인다
     // 3215가 되면 세번째 A에 on을 붙인다
-    if (html.scrollTop > 740 && html.scrollTop < 1600) {
+
+    console.log(html.scrollTop);
+
+    if (html.scrollTop > 600 && html.scrollTop < 1000) {
         headerUl.children[0].children[0].className = "on";
     } else {
         headerUl.children[0].children[0].className = "";
     }
 
-    if (html.scrollTop > 1600 && html.scrollTop < 3000) {
+    if (html.scrollTop > 1000 && html.scrollTop < 2000) {
         headerUl.children[1].children[0].className = "on";
     } else {
         headerUl.children[1].children[0].className = "";
     }
 
-    if (html.scrollTop > 3500) {
+    if (html.scrollTop > 2000) {
         headerUl.children[2].children[0].className = "on";
         for (let i = 0; i < contactLis.length; i++) {
             contactLis[i].classList.add("ani");

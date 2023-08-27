@@ -119,9 +119,23 @@ const portfolioImgDiv = document.createElement("div");
 const portfolioTextDiv = document.createElement("div");
 const portfolioImg = document.createElement("img");
 
-const portfolioList = ["ediya", "naver", "29cm", "3min", "line", "ediya", "ediya"];
-const portfolioTextList = ["clone / ediya", "naver", "29cm", "3min", "line", "ediya", "ediya"];
-const portfolioLinkList = ["ediya", "line-friends", "29CM", "unnis_info", "line", "ediya", "ediya"];
+const portfolioList = ["unnis", "mbti", "admin", "ediya", "line", "29cm"];
+const portfolioTextList = [
+    "언니스 홈페이지",
+    "MBTI 테스트",
+    "언니스 어드민 페이지",
+    "클론 / 이디야",
+    "클론 / 라인프렌즈",
+    "클론 / 29cm",
+];
+const portfolioLinkList = [
+    "https://yesoljeong.github.io/unnis_info",
+    "https://yesoljeong.github.io/unnis_spti",
+    "https://www.notion.so/admin-page-03e7104c1fdb4e419524bce24d18aeca",
+    "https://yesoljeong.github.io/ediya",
+    "https://yesoljeong.github.io/line-friends",
+    "https://yesoljeong.github.io/29CM",
+];
 
 for (let i = 0; i < portfolioList.length; i++) {
     const portfolioLi = document.createElement("li");
@@ -142,12 +156,9 @@ const portfolioDivs = portfolioWrap.querySelectorAll("div:nth-child(1)");
 console.log(portfolioDivs[0].setAttribute);
 
 for (let i = 0; i < portfolioImgs.length; i++) {
-    portfolioImgs[i].src = `/img/${portfolioList[i]}.png`;
+    portfolioImgs[i].src = window.location.origin + `/img/${portfolioList[i]}.png`;
     portfolioTexts[i].textContent = `${portfolioTextList[i]}`;
-    portfolioDivs[i].setAttribute(
-        "onClick",
-        `location.href='https://yesoljeong.github.io/${portfolioLinkList[i]}';`
-    );
+    portfolioDivs[i].setAttribute("onClick", `location.href='${portfolioLinkList[i]}';`);
 }
 
 // const portfolioImgs = portfolioWrap.querySelectorAll("img");
